@@ -49,18 +49,34 @@ public class RetryUtilTest extends TestCase {
                                     runningChecker));
             Thread.sleep(10000);
             executorService.shutdown();
-            log.info("Thread has finished");
+            //log.info("Thread has finished");
             assertEquals(0, user.age);
             assertEquals("test", user.name);
             assertEquals(false, runningChecker.isRunning());
         } catch (Exception e) {
-            log.warn("Exception has been caught");
+//log.warn("Exception has been caught");
         }
     }
 
-    @Data
+
     public class User {
         String name;
         int age;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public int getAge() {
+            return age;
+        }
+
+        public void setAge(int age) {
+            this.age = age;
+        }
     }
 }
