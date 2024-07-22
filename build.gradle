@@ -39,28 +39,28 @@ dependencies {
     implementation  'org.apache.flink:flink-avro:1.19.1'
 
     // RocketMQ
-    api('org.apache.rocketmq:rocketmq-client:4.9.2') {
+    flinkShadowJar('org.apache.rocketmq:rocketmq-client:4.9.2') {
         exclude group: 'io.github.aliyunmq', module: 'rocketmq-logback-classic'
         exclude group: 'io.github.aliyunmq', module: 'rocketmq-shaded-slf4j-api-bridge'
     }
-    api('org.apache.rocketmq:rocketmq-acl:4.9.2') {
+    flinkShadowJar('org.apache.rocketmq:rocketmq-acl:4.9.2') {
         exclude group: 'io.github.aliyunmq', module: 'rocketmq-logback-classic'
         exclude group: 'io.github.aliyunmq', module: 'rocketmq-shaded-slf4j-api-bridge'
     }
-    api('org.apache.rocketmq:rocketmq-common:4.9.2') {
+    flinkShadowJar('org.apache.rocketmq:rocketmq-common:4.9.2') {
         exclude group: 'io.netty', module: 'netty-tcnative'
     }
-    api ('org.apache.rocketmq:rocketmq-namesrv:4.9.2'){
+    flinkShadowJar ('org.apache.rocketmq:rocketmq-namesrv:4.9.2'){
         exclude group: 'ch.qos.logback', module: 'logback-classic'
         exclude group: 'ch.qos.logback', module: 'logback-core'
     }
-    api('org.apache.rocketmq:rocketmq-tools:4.9.2') {
+    flinkShadowJar('org.apache.rocketmq:rocketmq-tools:4.9.2') {
         exclude group: 'io.github.aliyunmq', module: 'rocketmq-logback-classic'
         exclude group: 'io.github.aliyunmq', module: 'rocketmq-shaded-slf4j-api-bridge'
     }
-    api 'org.apache.rocketmq:schema-registry-client:0.1.0'
+    flinkShadowJar 'org.apache.rocketmq:schema-registry-client:0.1.0'
     api 'org.apache.rocketmq:rocketmq-test:4.9.2'
-    api ('org.apache.rocketmq:rocketmq-broker:4.9.2'){
+    flinkShadowJar ('org.apache.rocketmq:rocketmq-broker:4.9.2'){
         exclude group: 'ch.qos.logback', module: 'logback-classic'
     }
     // Other dependencies
