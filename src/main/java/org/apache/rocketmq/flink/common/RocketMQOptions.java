@@ -95,7 +95,11 @@ public class RocketMQOptions {
 
     public static final ConfigOption<String> OPTIONAL_SECRET_KEY =
             ConfigOptions.key("secretKey").stringType().noDefaultValue();
-
+    public static final ConfigOption<Integer> EXECUTOR_NUM =
+            ConfigOptions.key("executorNum")
+                    .intType()
+                    .defaultValue(4)
+                    .withDescription("Message send timeout in ms.");
     // --------------------------------------------------------------------------------------------
     // Scan specific options
     // --------------------------------------------------------------------------------------------
