@@ -19,9 +19,10 @@
 package org.apache.rocketmq.flink.catalog;
 
 import org.apache.rocketmq.client.exception.MQClientException;
-import org.apache.rocketmq.common.admin.TopicStatsTable;
+//import org.apache.rocketmq.common.admin.TopicStatsTable;
 import org.apache.rocketmq.flink.common.constant.RocketMqCatalogConstant;
 import org.apache.rocketmq.remoting.protocol.LanguageCode;
+import org.apache.rocketmq.remoting.protocol.admin.TopicStatsTable;
 import org.apache.rocketmq.schema.registry.client.SchemaRegistryClient;
 import org.apache.rocketmq.schema.registry.client.SchemaRegistryClientFactory;
 import org.apache.rocketmq.schema.registry.common.dto.GetSchemaResponse;

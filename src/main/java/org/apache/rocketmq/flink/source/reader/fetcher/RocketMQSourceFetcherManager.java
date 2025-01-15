@@ -54,14 +54,12 @@ public class RocketMQSourceFetcherManager<T>
      *     the same queue instance that is also passed to the {@link SourceReaderBase}.
      * @param splitReaderSupplier The factory for the split reader that connects to the source
      *     system.
-     * @param splitFinishedHook Hook for handling finished splits in split fetchers.
      */
     public RocketMQSourceFetcherManager(
             FutureCompletingBlockingQueue<RecordsWithSplitIds<Tuple3<T, Long, Long>>> elementsQueue,
             Supplier<SplitReader<Tuple3<T, Long, Long>, RocketMQPartitionSplit>>
-                    splitReaderSupplier,
-            Consumer<Collection<String>> splitFinishedHook) {
-        super(elementsQueue, splitReaderSupplier, splitFinishedHook);
+                    splitReaderSupplier) {
+        super(elementsQueue, splitReaderSupplier);
     }
 
     public void commitOffsets(

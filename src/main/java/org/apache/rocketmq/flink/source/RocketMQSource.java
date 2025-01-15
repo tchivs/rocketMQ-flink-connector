@@ -178,8 +178,7 @@ public class RocketMQSource<OUT>
 
         return new RocketMQSourceReader<>(
                 elementsQueue,
-                new RocketMQSourceFetcherManager<>(
-                        elementsQueue, splitReaderSupplier, (ignore) -> {}),
+                new RocketMQSourceFetcherManager<>(elementsQueue, splitReaderSupplier),
                 recordEmitter,
                 new Configuration(),
                 readerContext);

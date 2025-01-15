@@ -22,10 +22,10 @@ import org.apache.rocketmq.client.AccessChannel;
 import org.apache.rocketmq.client.ClientConfig;
 import org.apache.rocketmq.client.consumer.DefaultMQPullConsumer;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
-import org.apache.rocketmq.common.protocol.heartbeat.MessageModel;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.Validate;
+import org.apache.rocketmq.remoting.protocol.heartbeat.MessageModel;
 
 import java.util.Properties;
 import java.util.UUID;
